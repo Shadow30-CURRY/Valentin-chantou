@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valentine ❤️</title>
+
+<style>
+body {
+    background-color: #ff4d6d;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+h1 {
+    margin-top: 100px;
+    color: white;
+    font-size: 40px;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 20px;
+}
+
+#yesBtn {
+    background-color: white;
+    color: #ff4d6d;
+}
+
+#noBtn {
+    background-color: black;
+    color: white;
+    position: relative;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Chantal, will you be my Valentine? ❤️</h1>
+
+<button id="yesBtn">YES 💖</button>
+<button id="noBtn">NO 😏</button>
+
+<audio id="bgMusic" autoplay loop>
+  <source src="knowyou.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const noBtn = document.getElementById("noBtn");
+
+// Bouton NON qui se déplace
+noBtn.addEventListener("mouseover", function() {
+    const randomX = Math.floor(Math.random() * window.innerWidth);
+    const randomY = Math.floor(Math.random() * window.innerHeight);
+
+    noBtn.style.position = "absolute";
+    noBtn.style.left = randomX + "px";
+    noBtn.style.top = randomY + "px";
+});
+
+// Lancer la musique au premier clic
+document.addEventListener("click", function() {
+    document.getElementById("bgMusic").play();
+});
+
+// Message quand elle clique OUI
+document.getElementById("yesBtn").addEventListener("click", function(){
+    alert("Yayyy ❤️ I love you Chantal 💕");
+});
+</script>
+
+</body>
+</html>
