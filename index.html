@@ -75,6 +75,16 @@ document.getElementById("yesBtn").addEventListener("click", function(){
     alert("Yayyy ❤️ I love you Chantal 💕");
 });
 </script>
+<script>
+const noBtn = document.getElementById("noBtn");
+const yesBtn = document.getElementById("yesBtn");
 
+let size = 1;
+
+noBtn.addEventListener("click", function() {
+    size += 0.2; // augmente la taille
+    yesBtn.style.transform = "scale(" + size + ")";
+});
+</script>
 </body>
 </html>
